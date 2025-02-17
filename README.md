@@ -1,5 +1,5 @@
 # 📕 LLM-chatGPT
-[![License](https://img.shields.io/github/license/221b0825/LLM-chatGPT)](LICENSE)  
+[![License](https://img.shields.io/github/license/221b0825/LLM-chatGPT)](https://github.com/221B0825/LLM-chatGPT/blob/main/LICENSE)  
 [![Last Commit](https://img.shields.io/github/last-commit/221b0825/LLM-chatGPT)](https://github.com/221b0825/LLM-chatGPT/commits/main)
 
 ## 🚀 Introduction
