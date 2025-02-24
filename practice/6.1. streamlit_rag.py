@@ -1,12 +1,15 @@
 import os
+from dotenv import load_dotenv
 import streamlit as st
 import openai
 
+load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
+
 
 @st.cache_resource
 def get_db():
@@ -45,6 +48,10 @@ def main():
     st.title("RAG Chatbot with Streamlit and OpenAI")
     st.chat_input(placeholder="대화를 입력해주세요.", key="chat_input")
 
+    # ✅ chat_input 키가 없으면 기본값 설정
+    if "chat_input" not in st.session_state:
+        st.session_state.chat_input = ""
+        
     db = get_db()
     
     if "messages" not in st.session_state:
